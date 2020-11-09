@@ -160,8 +160,15 @@ function data() {
         .pipe(gulp.dest('./docs/data'));
 }
 
+// Copy content to 'docs'
+function content() {
+    return gulp
+        .src('./app/content/**/*.{html,htm}')
+        .pipe(gulp.dest('./docs/content'));
+}
+
 // Migration Sequence
-const assets = gulp.series(cname, fonts, html, images, icons, data, css_plugins, js_plugins, google_fonts);
+const assets = gulp.series(cname, fonts, html, images, icons, data, css_plugins, js_plugins, google_fonts, content);
 
 //
 // Watch

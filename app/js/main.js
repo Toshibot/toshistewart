@@ -5,129 +5,6 @@
 // Core Functions 
 data();
 
-
-// Data - Fixture/Results
-
-function dataFixture() {
-
-    // Variables
-    var self = this;
-    var matchday = [];
-    self.matchesURI = "https://api.stattleship.com/basketball/nba/games";
-    // self.matchdayURI = "https://api.stattleship.com/basketball/nba/games";
-
-    self.ajax = function(uri, method, data) {
-       var request = {
-          url: uri,
-          type: method,
-          accepts: "application/json",
-          cache: false,
-          dataType: "json",
-          data: JSON.stringify(data),
-          headers: {
-              "Authorization": "Token token=f5f4df6767513d417c5f8a80f6d84c64",
-              "Content-Type": "application/json",
-              "Accept": "application/vnd.stattleship.com; version=1"
-            },
-          error: function (jqXHR) {
-                console.log("ajax error " + jqXHR.status);
-          }
- 
-       };
- 
-       return $.ajax(request);
-    }
-
-    // Matchday
-    // self.ajax(self.matchdayURI, 'GET').done(function(data){
-    //     var competitions = data.competitions;
-
-    //     for (i = 0; i < competitions.length; i++) {
-    //         const comp = competitions[i];
-            
-    //         if (comp.id == 2002) {
-    //             matchday.push(comp.currentSeason.currentMatchday);
-    //         }
-    //     }
-    // });
-
-    self.ajax(self.matchesURI, 'GET').done(function(data) {
-
-        console.log(data);
-
-        var matches = data.matches;
-        var today = new Date;
-        // var testDate = new Date('2018-04-24');
-        var currentRound = [];
-        var currentRoundNo = matchday[0];
-
-        // $('.js-fixture-round').text(currentRoundNo + ". Spieltag");
-
-        // for (i = 0; i < matches.length; i++) {
-        //     const element = matches[i];
-            
-        //     if (element.matchday == currentRoundNo) {
-        //         currentRound.push(element);
-        //     }
-        // }
-
-        // for (i = 0; i < currentRound.length; i++) {
-        //     const element = currentRound[i];
-
-        //     fixtureItem(element);
-        // }
-    })
-}
-
-
-//
-// Data
-// ====
-function dataLadder() { 
-
-    var self = this;
-
-    self.ajax = function(uri, method, data) {
-       var request = {
-          url: uri,
-          type: method,
-          accepts: "application/json",
-          cache: false,
-          dataType: "json",
-          data: JSON.stringify(data),
-          headers: {"X-Auth-Token": "5c8b70988e784fca8186b93d38b1bae7"},
-          error: function (jqXHR) {
-                console.log("ajax error " + jqXHR.status);
-          }
- 
-       };
- 
-       return $.ajax(request);
-    }
-    
-    self.tasksURI = "https://api.football-data.org/v2/competitions/2002/standings";
-
-    self.ajax(self.tasksURI, 'GET').done(function(data) {
-        // console.log(data);
-
-        var ladder = data.standings[0].table;
-        console.log(ladder);
-
-        // Construct the Ladder
-        for (i = 0; i < ladder.length; i++) {
-            const element = ladder[i];
-            ladderItem(element, i+1);
-        }
-    })
-
-}
-
-function data() {
-   // dataFixture();
-   // dataLadder();
-
-}
-
 function dateTime(d) {
 
     var date = new Date(d);
@@ -774,17 +651,128 @@ function teamImg(team) {
     }
 }
 
+
+// Data - Fixture/Results
+
+function dataFixture() {
+
+    // Variables
+    var self = this;
+    var matchday = [];
+    self.matchesURI = "https://api.stattleship.com/basketball/nba/games";
+    // self.matchdayURI = "https://api.stattleship.com/basketball/nba/games";
+
+    self.ajax = function(uri, method, data) {
+       var request = {
+          url: uri,
+          type: method,
+          accepts: "application/json",
+          cache: false,
+          dataType: "json",
+          data: JSON.stringify(data),
+          headers: {
+              "Authorization": "Token token=f5f4df6767513d417c5f8a80f6d84c64",
+              "Content-Type": "application/json",
+              "Accept": "application/vnd.stattleship.com; version=1"
+            },
+          error: function (jqXHR) {
+                console.log("ajax error " + jqXHR.status);
+          }
+ 
+       };
+ 
+       return $.ajax(request);
+    }
+
+    // Matchday
+    // self.ajax(self.matchdayURI, 'GET').done(function(data){
+    //     var competitions = data.competitions;
+
+    //     for (i = 0; i < competitions.length; i++) {
+    //         const comp = competitions[i];
+            
+    //         if (comp.id == 2002) {
+    //             matchday.push(comp.currentSeason.currentMatchday);
+    //         }
+    //     }
+    // });
+
+    self.ajax(self.matchesURI, 'GET').done(function(data) {
+
+        console.log(data);
+
+        var matches = data.matches;
+        var today = new Date;
+        // var testDate = new Date('2018-04-24');
+        var currentRound = [];
+        var currentRoundNo = matchday[0];
+
+        // $('.js-fixture-round').text(currentRoundNo + ". Spieltag");
+
+        // for (i = 0; i < matches.length; i++) {
+        //     const element = matches[i];
+            
+        //     if (element.matchday == currentRoundNo) {
+        //         currentRound.push(element);
+        //     }
+        // }
+
+        // for (i = 0; i < currentRound.length; i++) {
+        //     const element = currentRound[i];
+
+        //     fixtureItem(element);
+        // }
+    })
+}
+
+
 //
-// UI - Buttons
-// ==========================================================================
+// Data
+// ====
+function dataLadder() { 
 
-// Variables
-// var gitButton = document.getElementById('js-button-github');
+    var self = this;
 
-// gitButton.addEventListener('click', function(){
-//     window.open('https://github.com/Toshibot/webapp-boilerplate', '_blank');
-// });
+    self.ajax = function(uri, method, data) {
+       var request = {
+          url: uri,
+          type: method,
+          accepts: "application/json",
+          cache: false,
+          dataType: "json",
+          data: JSON.stringify(data),
+          headers: {"X-Auth-Token": "5c8b70988e784fca8186b93d38b1bae7"},
+          error: function (jqXHR) {
+                console.log("ajax error " + jqXHR.status);
+          }
+ 
+       };
+ 
+       return $.ajax(request);
+    }
+    
+    self.tasksURI = "https://api.football-data.org/v2/competitions/2002/standings";
 
+    self.ajax(self.tasksURI, 'GET').done(function(data) {
+        // console.log(data);
+
+        var ladder = data.standings[0].table;
+        console.log(ladder);
+
+        // Construct the Ladder
+        for (i = 0; i < ladder.length; i++) {
+            const element = ladder[i];
+            ladderItem(element, i+1);
+        }
+    })
+
+}
+
+function data() {
+   // dataFixture();
+   // dataLadder();
+
+}
 //
 // Layout - Vertically Centered
 // ==========================================================================
@@ -837,3 +825,15 @@ $(window).on('resize', function() {
     // clearStyles($('.o-vert-center'), $('.o-vert-center__object'));
     // vertCenter($('.o-vert-center'), '.o-vert-center__object');
 });
+
+
+//
+// UI - Buttons
+// ==========================================================================
+
+// Variables
+// var gitButton = document.getElementById('js-button-github');
+
+// gitButton.addEventListener('click', function(){
+//     window.open('https://github.com/Toshibot/webapp-boilerplate', '_blank');
+// });
