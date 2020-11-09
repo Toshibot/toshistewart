@@ -1,0 +1,67 @@
+.u-align {
+   &-left {
+      text-align: left;
+
+      &\@lg {
+         @media screen and (max-width: $break-l) {
+            text-align: left;
+         }
+      }
+
+      &\@md {
+         @media screen and (max-width: $break-m) {
+            text-align: left;
+         }
+      }
+
+      &\@sm {
+         @media screen and (max-width: $break-s) {
+            text-align: left;
+         }
+      }
+   }
+
+   &-right {
+      text-align: left;
+
+      &\@lg {
+         @media screen and (max-width: $break-l) {
+            text-align: right;
+         }
+      }
+
+      &\@md {
+         @media screen and (max-width: $break-m) {
+            text-align: right;
+         }
+      }
+
+      &\@sm {
+         @media screen and (max-width: $break-s) {
+            text-align: right;
+         }
+      }
+   }
+
+   &-center {
+      text-align: center;
+
+      &\@lg {
+         @media screen and (max-width: $break-l) {
+            text-align: center;
+         }
+      }
+
+      &\@md {
+         @media screen and (max-width: $break-m) {
+            text-align: center;
+         }
+      }
+
+      &\@sm {
+         @media screen and (max-width: $break-s) {
+            text-align: center;
+         }
+      }
+   }
+}

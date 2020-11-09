@@ -1,0 +1,19 @@
+html, body {
+	height: $width-12;
+}
+
+body {
+	font-family: $font-body;
+	background: $color-grey-light;
+    text-align: center;
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $font-heading, sans-serif;
+	}
+
+	p {
+		font-family: $font-body;
+		font-size: toRems(18px);
+		line-height: 24px;
+	}
+}

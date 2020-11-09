@@ -1,0 +1,72 @@
+.o-section {
+	padding: $size-base-xl 0;
+	width: $width-12;
+	position: relative;
+	z-index: 999;
+
+	h1 {
+		display: inline-block;
+		font-size: toRems(48px);
+		font-weight: 700;
+		width: $width-12;
+		padding: $size-base 0 $size-base-s !important;
+	}
+	
+	h2 {
+		font-family: $font-heading;
+		font-weight: 700;
+		font-size: toRems(32px);
+		width: $width-12;
+		padding: $size-base 0;
+	}
+
+	p { 
+		width: $width-12;
+		padding-bottom: $size-base;
+		font-size: toRems(18px);
+		line-height: toRems(24px);
+
+		@media screen and (max-width: $break-s) {
+			padding: 0 $size-base $size-base;
+		}
+	}
+
+	&--white {
+		background: $color-white;
+	}
+
+	&--bg {
+
+		&-2 {
+			background: url('../../img/schwzwldstdn.jpg');
+			background-position: bottom center;
+			background-attachment: fixed;
+
+			@media screen and (max-width: $break-s){
+				background-attachment: scroll;
+			}
+		}
+
+		&-3 {
+			background: url('../../img/headerBg3.jpg');
+			background-position: bottom center;
+			background-attachment: fixed;
+
+			@media screen and (max-width: $break-s){
+				background-attachment: scroll;
+			}
+		}
+	}
+
+	&--splash {
+		padding: $size-base-lg 0 $size-base-xl;
+
+		p {
+			padding: 0 $width-3;
+
+			@media screen and (max-width: $break-s) {
+				padding: 0 $size-base $size-base;
+			}
+		}
+	}
+}
