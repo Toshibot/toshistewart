@@ -1177,6 +1177,7 @@ body {
     padding: 25px 0; }
   .o-section p {
     width: 100%;
+    max-width: 600px;
     padding-bottom: 25px;
     font-size: 1.125rem;
     line-height: 1.5rem; }
@@ -1186,23 +1187,24 @@ body {
   .o-section--white {
     background: #fff; }
   .o-section--bg-2 {
-    background: url("../../img/schwzwldstdn.jpg");
+    background: url("../../img/desbrownBg.jpg");
     background-position: bottom center;
-    background-attachment: fixed; }
+    background-attachment: fixed;
+    background-size: cover; }
     @media screen and (max-width: 64em) {
       .o-section--bg-2 {
         background-attachment: scroll; } }
   .o-section--bg-3 {
-    background: url("../../img/headerBg3.jpg");
-    background-position: bottom center;
-    background-attachment: fixed; }
-    @media screen and (max-width: 64em) {
-      .o-section--bg-3 {
-        background-attachment: scroll; } }
+    background: #f5f5f7; }
+  .o-section--bg-4 {
+    background: #a9d7a8; }
+  .o-section--bg-5 {
+    background: #fcfcb6; }
   .o-section--splash {
     padding: 50px 0 100px; }
     .o-section--splash p {
-      padding: 0 25%; }
+      padding: 0 25%;
+      max-width: 100%; }
       @media screen and (max-width: 64em) {
         .o-section--splash p {
           padding: 0 25px 25px; } }
@@ -1739,4 +1741,10 @@ body {
 
 .c-image img {
   display: inline-block;
-  max-width: 256px; }
+  max-width: 400px; }
+  @media (min-width: 75em) {
+    .c-image img {
+      float: right; } }
+
+.c-portrait {
+  max-width: 300px; }

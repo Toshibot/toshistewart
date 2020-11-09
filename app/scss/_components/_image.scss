@@ -2,6 +2,10 @@
 
    img {
       display: inline-block;
-      max-width: 256px;
+      max-width: 400px;
+
+      @media (min-width: $break-m) {
+			float:right;
+		}
    }
 }

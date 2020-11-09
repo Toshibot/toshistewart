@@ -22,6 +22,7 @@
 
 	p { 
 		width: $width-12;
+		max-width: 600px;
 		padding-bottom: $size-base;
 		font-size: toRems(18px);
 		line-height: toRems(24px);
@@ -38,9 +39,10 @@
 	&--bg {
 
 		&-2 {
-			background: url('../../img/schwzwldstdn.jpg');
+			background: url('../../img/desbrownBg.jpg');
 			background-position: bottom center;
 			background-attachment: fixed;
+			background-size: cover;
 
 			@media screen and (max-width: $break-s){
 				background-attachment: scroll;
@@ -48,13 +50,15 @@
 		}
 
 		&-3 {
-			background: url('../../img/headerBg3.jpg');
-			background-position: bottom center;
-			background-attachment: fixed;
+			background: #f5f5f7;
+		}
 
-			@media screen and (max-width: $break-s){
-				background-attachment: scroll;
-			}
+		&-4 {
+			background: #a9d7a8;
+		}
+
+		&-5 {
+			background: #fcfcb6;
 		}
 	}
 
@@ -63,6 +67,7 @@
 
 		p {
 			padding: 0 $width-3;
+			max-width: 100%;
 
 			@media screen and (max-width: $break-s) {
 				padding: 0 $size-base $size-base;
