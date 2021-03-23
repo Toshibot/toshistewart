@@ -1,66 +1,78 @@
 .u-align {
    &-left {
       text-align: left;
+      justify-content: left;
 
       &\@lg {
          @media screen and (max-width: $break-l) {
             text-align: left;
+            justify-content: left;
          }
       }
 
       &\@md {
          @media screen and (max-width: $break-m) {
             text-align: left;
+            justify-content: left;
          }
       }
 
       &\@sm {
          @media screen and (max-width: $break-s) {
             text-align: left;
+            justify-content: left;
          }
       }
    }
 
    &-right {
-      text-align: left;
+      text-align: right;
+      justify-content: right;
 
       &\@lg {
          @media screen and (max-width: $break-l) {
             text-align: right;
+            justify-content: right;
          }
       }
 
       &\@md {
          @media screen and (max-width: $break-m) {
             text-align: right;
+            justify-content: right;
          }
       }
 
       &\@sm {
          @media screen and (max-width: $break-s) {
             text-align: right;
+            justify-content: right;
          }
       }
    }
 
    &-center {
       text-align: center;
+      justify-content: center;
 
       &\@lg {
          @media screen and (max-width: $break-l) {
             text-align: center;
+            justify-content: center;
          }
       }
 
       &\@md {
          @media screen and (max-width: $break-m) {
             text-align: center;
+            justify-content: center;
          }
       }
 
       &\@sm {
          @media screen and (max-width: $break-s) {
             text-align: center;
+            justify-content: center;
          }
       }
    }

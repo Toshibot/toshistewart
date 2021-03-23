@@ -10,6 +10,7 @@ var browserSync = require('browser-sync').create();
 var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
 
+
 //
 // Clean
 // ==========================================================================
@@ -123,7 +124,7 @@ function fonts() {
 // Copy HTML to 'docs'
 function html() {
     return gulp
-        .src(['./app/*.{html,htm,php}'])
+        .src(['./app/**/*.{html,htm,php}'])
         .pipe(gulp.dest('./docs'));
 }
 
@@ -182,7 +183,7 @@ function watch_files() {
     gulp.watch('./app/js/_dev/**/*.js', gulp.series(js_concat, js_compress));
 
     // Watch HTML, HTM and PHP files for Changes
-    gulp.watch('app/*.{html,htm,php}', html);
+    gulp.watch(['app/*.{html,htm,php}', 'app/content/**/*.{htm,html,php}'], html);
 
     gulp.watch(
         [
