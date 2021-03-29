@@ -6,19 +6,26 @@
     font-size: 16px;
     color: $color-white;
     font-weight: 400;
+    font-family: $font-body;
     cursor: pointer;
+    @include transition(0.2s);
 
     &--github {
         background: $color-black;
     }
 
     i {
-        margin-right: 3px;
+        margin-right: 10px;
         display: inline-block;
         font-size: 25px;
         height: $size-base;
         line-height: $size-base;
         vertical-align: text-bottom;
+
+        &.icon-right {
+            margin-right: 0;
+            margin-left: 10px;
+        }
     }
 
     span {
@@ -31,10 +38,18 @@
     .t-light & {
         color: $color-white;
         background-color: $color-black;
+
+        &:hover {
+            background-color: $color-grey-dark;
+        }
     }
 
     .t-dark & {
         color: $color-black;
         background-color: $color-white;
+
+        &:hover {
+            background-color: $color-grey-light;
+        }
     }
 }

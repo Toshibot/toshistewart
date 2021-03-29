@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:300,700');
-
+// @import url('https://fonts.googleapis.com/css?family=Inter:300,700|Montserrat:300,700');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300%3b700&family=Noto+Sans:ital,wght@0,400%3b0,700%3b1,400&display=swap');
 @font-face {
   font-family: 'Font Awesome';
   src: url("../fonts/fontawesome-webfont.eot");
@@ -11,7 +11,7 @@
   font-style: normal;
 }
 
-$font-body: 'Lato', sans-serif;
+$font-body: 'Noto Sans', sans-serif;
 $font-heading: 'Montserrat', sans-serif;
 $font-heading-s: 'Montserrat', sans-serif;
 $font-script: 'Dancing Script', serif;

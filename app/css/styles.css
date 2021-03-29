@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:300,700");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300%3b700&family=Noto+Sans:ital,wght@0,400%3b0,700%3b1,400&display=swap");
 @font-face {
   font-family: 'Font Awesome';
   src: url("../fonts/fontawesome-webfont.eot");
@@ -1167,13 +1167,13 @@ html, body {
   height: 100%; }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   background: #ccc;
   text-align: center; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: "Montserrat", sans-serif, sans-serif; }
   body p {
-    font-family: "Lato", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-size: 1.125rem;
     line-height: 24px; }
 
@@ -1206,11 +1206,22 @@ body {
     width: 100%;
     max-width: 600px;
     padding-bottom: 25px;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.5rem; }
     @media screen and (max-width: 64em) {
       .o-section p {
         padding: 0 25px 25px; } }
+    .o-section p a {
+      color: #FF002B;
+      text-decoration: none;
+      transition: all 0.2s ease-out;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out; }
+      .o-section p a:hover {
+        color: #999; }
+  .o-section--folio {
+    padding: 25px 0; }
   .o-section--white {
     background: #fff; }
   .o-section--bg-2 {
@@ -1270,7 +1281,7 @@ body {
   .o-content h3 {
     font-family: "Montserrat", sans-serif; }
   .o-content p {
-    font-family: "Lato", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-size: 16px;
     line-height: 25px;
     margin-bottom: 25px; }
@@ -1516,16 +1527,24 @@ body {
   font-size: 16px;
   color: #fff;
   font-weight: 400;
-  cursor: pointer; }
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out; }
   .c-button--github {
     background: #333; }
   .c-button i {
-    margin-right: 3px;
+    margin-right: 10px;
     display: inline-block;
     font-size: 25px;
     height: 25px;
     line-height: 25px;
     vertical-align: text-bottom; }
+    .c-button i.icon-right {
+      margin-right: 0;
+      margin-left: 10px; }
   .c-button span {
     height: 25px;
     line-height: 25px;
@@ -1534,9 +1553,13 @@ body {
   .t-light .c-button {
     color: #fff;
     background-color: #333; }
+    .t-light .c-button:hover {
+      background-color: #666; }
   .t-dark .c-button {
     color: #333;
     background-color: #fff; }
+    .t-dark .c-button:hover {
+      background-color: #ccc; }
 
 @media screen and (min-width: 90em) {
   .c-ladder__container {

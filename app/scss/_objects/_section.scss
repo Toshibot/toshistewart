@@ -31,12 +31,26 @@
 		width: $width-12;
 		max-width: 600px;
 		padding-bottom: $size-base;
-		font-size: toRems(18px);
+		font-size: toRems(16px);
 		line-height: toRems(24px);
 
 		@media screen and (max-width: $break-s) {
 			padding: 0 $size-base $size-base;
 		}
+
+		a {
+			color: $color-red;
+			text-decoration: none;
+			@include transition(0.2s);
+
+			&:hover {
+				color: $color-grey;
+			}
+		}
+	}
+
+	&--folio {
+		padding: $size-base 0;
 	}
 
 	&--white {
